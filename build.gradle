@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'kr.entree.spigradle' version '2.2.4'
+
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+apply plugin: 'groovy'
+
+
+
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+dependencies {
+    compileOnly spigot('1.18.2')
+
+    implementation fileTree(dir: 'api', include: ['*.jar'])
+    implementation 'com.github.YooInseo:SkyExcelCore:v1.0.0'
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    destinationDirectory.set(file('D:\\Project\\minecraft\\Commission\\플러그인테스트\\1.18.2\\plugins'))
+}

@@ -1,0 +1,12 @@
+name: DailyReward
+main: me.github.skyexcel.DailyReward
+version: 1.0
+author: SkyExcel
+api-version: 1.13
+depend:
+  - SkyExcelCore
+
+commands:
+  출석체크:
+    description: 출석체크를 합니다.
+    aliases: [ ㅊ ]
