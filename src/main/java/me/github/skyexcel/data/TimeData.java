@@ -1,8 +1,8 @@
 package me.github.skyexcel.data;
 
+import data.Config;
+import data.Time;
 import me.github.skyexcel.DailyReward;
-import me.github.skyexcelcore.data.Config;
-import me.github.skyexcelcore.data.Time;
 import org.bukkit.entity.Player;
 
 public class TimeData {

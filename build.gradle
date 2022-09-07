@@ -1,7 +1,6 @@
 plugins {
     id 'java'
     id 'kr.entree.spigradle' version '2.2.4'
-
 }
 
 group 'org.example'
@@ -19,8 +18,7 @@ dependencies {
     compileOnly spigot('1.18.2')
 
     implementation fileTree(dir: 'api', include: ['*.jar'])
-    implementation 'com.github.YooInseo:SkyExcelCore:v1.0.0'
-
+    implementation 'com.github.SkyExcel-Team:SkyExcelCore:v1.0.2'
 
 }
 

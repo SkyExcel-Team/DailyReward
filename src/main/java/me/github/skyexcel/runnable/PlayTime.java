@@ -1,7 +1,7 @@
 package me.github.skyexcel.runnable;
 
-import me.github.skyexcelcore.data.Config;
-import me.github.skyexcelcore.data.Time;
+import data.Config;
+import data.Time;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 

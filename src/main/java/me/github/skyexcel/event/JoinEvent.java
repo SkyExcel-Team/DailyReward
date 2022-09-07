@@ -1,7 +1,6 @@
 package me.github.skyexcel.event;
 
 import me.github.skyexcel.data.TimeData;
-import me.github.skyexcelcore.data.Config;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

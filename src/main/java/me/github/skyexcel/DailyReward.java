@@ -1,9 +1,9 @@
 package me.github.skyexcel;
 
+import data.Config;
 import me.github.skyexcel.cmd.RewardCmd;
 import me.github.skyexcel.event.JoinEvent;
-import me.github.skyexcelcore.SkyExcel;
-import me.github.skyexcelcore.data.Config;
+
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
@@ -22,23 +22,18 @@ public class DailyReward extends JavaPlugin {
     @Override
     public void onEnable() {
         super.onEnable();
-        if (getCore() != null) {
-            SkyExcel.setNewPlugin(this);
 
-            plugin = this;
-            config = new Config("config");
-            config.setPlugin(plugin);
-            config.loadDefaultPluginConfig();
+        plugin = this;
+        config = new Config("config");
+        config.setPlugin(plugin);
+        config.loadDefaultPluginConfig();
 
 
-
-            getCommand("출석체크").setExecutor(new RewardCmd());
-            Listener[] listeners = {new JoinEvent()};
-            PluginManager pm = Bukkit.getPluginManager();
-            Arrays.stream(listeners).forEach(listener ->
-                    pm.registerEvents(listener, this));
-
-        }
+        getCommand("출석체크").setExecutor(new RewardCmd());
+        Listener[] listeners = {new JoinEvent()};
+        PluginManager pm = Bukkit.getPluginManager();
+        Arrays.stream(listeners).forEach(listener ->
+                pm.registerEvents(listener, this));
 
     }
 
@@ -46,13 +41,14 @@ public class DailyReward extends JavaPlugin {
     public void onDisable() {
         super.onDisable();
     }
-    public static SkyExcel getCore() {
-        Plugin SkyExcelCore = Bukkit.getServer().getPluginManager().getPlugin("SkyExcelCore");
-        if (SkyExcelCore instanceof SkyExcel) {
-            return (SkyExcel) SkyExcelCore;
-        } else {
-            return null;
-        }
-    }
+
+//    public static SkyExcel getCore() {
+//        Plugin SkyExcelCore = Bukkit.getServer().getPluginManager().getPlugin("SkyExcelCore");
+//        if (SkyExcelCore instanceof SkyExcel) {
+//            return (SkyExcel) SkyExcelCore;
+//        } else {
+//            return null;
+//        }
+//    }
 
 }
